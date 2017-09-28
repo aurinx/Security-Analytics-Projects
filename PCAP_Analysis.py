@@ -65,8 +65,6 @@ def read_traffic(filename, fields=[], display_filter="",
 
 # In[130]:
 
-#Problem 1
-#Does not return frame because of issues getting all packets, would only return the first one, prints instead
 get_ipython().system('tshark -n -r traffic_dump.pcap -T fields -Eheader=y -e frame.number -e frame.len > frame.len')
 def retrieve_ip_address_info():
     
@@ -124,8 +122,6 @@ retrieve_ip_address_info()
 
 # In[139]:
 
-#Problem 2
-#Re-uses the code from Problem 1 because of lack of returning a data frame, plots the data of selected IP address
 fields=["tcp.stream", "ip.src", "ip.dst", "tcp.seq", "tcp.ack", "tcp.window_size", "tcp.len"]
 ts=read_traffic("traffic_dump.pcap", fields, timeseries=True, strict=True)
     
@@ -155,7 +151,7 @@ plt.show()
         
 
 
-# #Problem 3 (list of files gathered from TCPFlow)
+# List of files/data gathered from TCPFlow
 # 004.071.104.187.00080-192.168.015.004.35950
 # 004.078.212.029.00080-192.168.015.004.35458
 # 004.078.212.029.00080-192.168.015.004.35712
