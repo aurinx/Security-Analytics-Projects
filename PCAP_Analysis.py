@@ -116,7 +116,6 @@ def retrieve_ip_address_info():
 
 # In[131]:
 
-#Problem 1
 retrieve_ip_address_info()
 
 
