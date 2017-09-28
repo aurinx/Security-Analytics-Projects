@@ -1,8 +1,6 @@
 
 # coding: utf-8
 
-# Security Analytics [EN.650.672] Aurin Chakravarty Assignment
-
 # In[127]:
 
 import numpy as np
